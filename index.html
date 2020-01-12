@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+  </head>
+  <body>
+    <h1 class="gameScore">0</h1>
+    <div class="death-screen">
+      <h1>Your Score: <span>0</span></h1>
+      <button onclick="gameReset()" class="restart">restart</button>
+    </div>
+    <canvas>
+      <h1>Please switch to a compatible browser.</h1>
+    </canvas>
+    <canvas id="layerd"></canvas>
+    <script src="/js/gameWorld.js"></script>
+    <script src="/js/playerController.js"></script>
+    <script src="/js/gameLoop.js"></script>
+  </body>
+</html>

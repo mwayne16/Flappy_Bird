@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Play:400,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: rgba(39, 43, 48, 1);
+  font-family: "Play", sans-serif;
+  overflow: hidden;
+}
+.gameScore {
+  position: absolute;
+  z-index: 99;
+  transform: translate(-50%, -15%);
+  left: 50%;
+  top: 15%;
+
+  font-family: "Play", sans-serif;
+  color: #fff;
+  font-size: 5em;
+  letter-spacing: -8px;
+  text-shadow: 0px 0px 5px #000;
+}
+.gameOverScore {
+  color: #fdb801;
+  text-shadow: 0px 0px 5px #fff;
+}
+canvas,
+#layered {
+  z-index: -99;
+  position: absolute;
+  border-radius: 15px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.death-screen {
+  position: absolute;
+  z-index: 99;
+  background: #e0d897;
+  color: #fff;
+  padding: 15px;
+  border: 2px solid #000;
+  border-radius: 15px;
+  width: 300px;
+  transform: translate(-50%, -150%);
+  top: 150%;
+  left: 50%;
+  text-align: center;
+  display: none;
+}
+
+.death-screen span {
+  padding-top: 15;
+  position: relative;
+  display: block;
+  font-size: 2em;
+  text-shadow: 0px 0px 2px #000;
+}
+
+.death-screen button {
+  margin-top: 15px;
+  padding: 5px 25px;
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgb(248, 170, 0);
+}
+
+.deathScreenActive {
+  display: block;
+  animation: deathScreenSlideUp 1s linear forwards;
+}
+@keyframes deathScreenSlideUp {
+  from {
+    transform: translate(-50%, -150%);
+    top: 150%;
+    left: 50%;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+}
