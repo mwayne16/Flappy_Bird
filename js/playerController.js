@@ -53,7 +53,7 @@ const Player = {
       this.calculateBirdAngle(this.playerMovement.vy);
       swooshAudio = new Audio("assets/swoosh.mp3");
       swooshAudio.play();
-      this.playerMovement.vy -= this.playerMovement.vy + 6;
+      this.playerMovement.vy -= this.playerMovement.vy + 8;
       this.y += this.playerMovement.vy;
       this.controller.up = false;
     } else {
@@ -80,7 +80,7 @@ const Player = {
   calculateBirdAngle(playerVY) {
     const apex = playerVY > 2 ? true : false;
     if (this.angle > maxAngle && this.controller.up === true) {
-      this.angle -= 0.25;
+      this.angle -= 0.35;
     } else if (apex === true && this.angle < minAngle) {
       this.angle += 0.02;
     } else {

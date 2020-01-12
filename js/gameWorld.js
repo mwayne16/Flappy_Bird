@@ -41,7 +41,7 @@ const gameWorld = {
   floorH: 30,
   floorX: 600,
   floorY: 700,
-  scrollSpeed: 2,
+  scrollSpeed: 3,
 
   gravity: {
     x: 0,
@@ -85,7 +85,7 @@ class Pipes {
     this.y = y;
     this.height = 539;
     this.width = 100;
-    this.scrollSpeed = 2;
+    this.scrollSpeed = 3;
     this.floor = 700;
     this.gap = 150;
     this.distance = 350;
