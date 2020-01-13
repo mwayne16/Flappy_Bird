@@ -19,10 +19,11 @@ const collisionDetection = (x1, x2, y1, y2, w1, w2, h1, h2) => {
   }
 };
 const playerPipePassCheck = (x1, x2, w1) => {
-  if (x1 + w1 <= x2 && x2 <= x1 + w1 + 1 && gameState != false) {
+  if (x1 + w1 <= x2 && x2 <= x1 + w1 + 3 && gameState != false) {
     scoreUpdater();
   }
 };
+
 const scoreUpdater = () => {
   Player.score++;
   Player.scoreDisplay(Player.score);
@@ -51,6 +52,7 @@ function animate() {
     then = now - (delta % interval);
     gameWorld.update();
     Player.update();
+
     pipes.forEach(pipe => {
       pipe.update();
       playerPipePassCheck(pipe.x, Player.x, pipe.width);

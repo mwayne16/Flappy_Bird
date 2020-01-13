@@ -24,7 +24,6 @@ const Player = {
     up: false,
     keyListener: function(event) {
       var keyState = event.type == "keydown" ? true : false;
-
       event.preventDefault();
       if (keyState === true && Player.playerState.deathScreen === false) {
         index = 1;
