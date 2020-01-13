@@ -93,7 +93,7 @@ const Player = {
   },
 
   deathScreen() {
-    scoreDisplay.innerHTML = "Tanners a cuck";
+    scoreDisplay.innerHTML = "Game Over";
     gameOverScreen.classList.add("deathScreenActive");
     scoreDisplay.classList.add("gameOverScore");
   },
