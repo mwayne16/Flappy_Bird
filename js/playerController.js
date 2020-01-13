@@ -80,7 +80,7 @@ const Player = {
   calculateBirdAngle(playerVY) {
     const apex = playerVY > 2 ? true : false;
     if (this.angle > maxAngle && this.controller.up === true) {
-      this.angle -= 0.35;
+      this.angle -= 0.4;
     } else if (apex === true && this.angle < minAngle) {
       this.angle += 0.02;
     } else {
@@ -93,7 +93,7 @@ const Player = {
   },
 
   deathScreen() {
-    scoreDisplay.innerHTML = "Game Over";
+    scoreDisplay.innerHTML = "Tanners a cuck";
     gameOverScreen.classList.add("deathScreenActive");
     scoreDisplay.classList.add("gameOverScore");
   },
